@@ -26,3 +26,10 @@ app.post("/my-server/capture-paypal-order", async (req, res) => {
   }
 });
 
+app.get("/teste", async (req, res) => {
+  try {
+    res.status(200).json({ message: "Salve."});
+  } catch (err) {
+    res.status(500).json({ error: "Failed to capture order." });
+  }
+});
